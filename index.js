@@ -47,7 +47,7 @@ function is31Flavors (arr) {
   }
 }
 
-is31Flavors(originalFlavors)
+// is31Flavors(originalFlavors)
 
 // // /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert!
 // // They think this will be a game changer. You need to modify the array to include this flavor.
@@ -104,17 +104,23 @@ getFlavorByIndex(originalFlavors, 2)
 // (1) an array
 // (2) a string (flavor)
 
-// For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla. 
+// For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla.
 
 // Hint: You can use .splice() for this
 
 // */
 
-// function removeFlavorByName( /* code here */ ) {
+function removeFlavorByName (arr, flav) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === flav) {
+      // console.log(arr[i]) //text to make sure 'vanilla' is the one being removed
+      arr.splice(i, 1)
+    }
+    console.log(arr)
+  }
+}
 
-//   /* code here */
-
-// }
+removeFlavorByName(originalFlavors, 'Vanilla')
 
 // /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.
 // Write a function called copy that makes a copy of the array.

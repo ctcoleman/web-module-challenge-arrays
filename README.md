@@ -1,4 +1,4 @@
-## Advanced CSS and Intro to JavaScript
+# Advanced CSS and Intro to JavaScript
 
 ## Arrays
 
@@ -14,6 +14,7 @@ Baskin Robins, a global chain of ice cream parlors, first opened in 1945 and ser
 Your challenge today will be to work with their array of ice cream flavors to access, remove, and add flavors, all while ensuring the length never exceeds 31.
 
 ## Instructions
+
 ### Task 1: Set up Project
 
 - [x] Create a forked copy of this project
@@ -28,8 +29,8 @@ Your challenge today will be to work with their array of ice cream flavors to ac
 Find the file `index.js` and complete the tasks until your returns look like the expected returns. Do not use any of the forbidden methods!
 
 ### Task 2b: Exit Ticket
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/38ztAXr6mzpDqSfXn/BGqHXsWCL8s6oB).
 
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/38ztAXr6mzpDqSfXn/BGqHXsWCL8s6oB).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
