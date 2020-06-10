@@ -47,7 +47,7 @@ function is31Flavors (arr) {
   }
 }
 
-// is31Flavors(originalFlavors)
+is31Flavors(originalFlavors)
 
 // // /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert!
 // // They think this will be a game changer. You need to modify the array to include this flavor.
@@ -154,24 +154,30 @@ console.log(originalFlavorsCopy)
 
 // hint - you can use the .includes method to help you solve this */
 
-// function filterByWord /* code here */ ) {
+function filterByWord (allFlavors, flavor) {
+  const filteredArray = []
 
-//   /* code here */
+  for (let i = 0; i < allFlavors.length; i++) {
+    if (allFlavors[i].includes(flavor)) {
+      filteredArray.push(allFlavors[i])
+      // console.log(allFlavors[i]) // debugging console.log
+    }
+  }
+  console.log(filteredArray)
+}
 
-// }
-
-
+filterByWord(originalFlavors, 'Chocolate')
 
 // /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
 // /* STRETCH 1: Write a function that returns the average number of words in an array.
 // You should be able to use this function for any array, but can test with originalFlavors.
 
-// Your function should accept: 
+// Your function should accept:
 
 // (1) an array
 
-// and should return the average number of words per item in the array. 
+// and should return the average number of words per item in the array.
 
 // For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
@@ -180,7 +186,6 @@ console.log(originalFlavorsCopy)
 //   /*code here*/
 
 // }
-
 
 // /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
