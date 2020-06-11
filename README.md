@@ -8,7 +8,7 @@
 - use array properties and array methods
 
 ## Introduction
-
+    
 Baskin Robins, a global chain of ice cream parlors, first opened in 1945 and served 31 flavors of Ice Cream. They have grown to almost 6,000 franchises world wide and have now became famous for serving exactly 31 flavors at a time. Since they first opened, they no longer serve the same 31 flavors, but they do always have exactly 31 ice cream flavors available.
 
 Your challenge today will be to work with their array of ice cream flavors to access, remove, and add flavors, all while ensuring the length never exceeds 31.
@@ -54,6 +54,6 @@ Make sure you are invoking your function after defining and wrapping a console.l
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request.**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete by merging the branch back into master
+- [x] Submit a Pull-Request to merge firstName-lastName Branch into master (student's  Repo). **Please don't merge your own pull request.**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete by merging the branch back into master
