@@ -1,4 +1,81 @@
-var originalFlavors = ['Banana Nut Fudge',
+// Data ⬇️
+const newFlavors = ['Date night',
+  'U.S.S Butterscotch (Stranger Things special)',
+  'Honey Almond',
+  'Mint Chocolate Chip',
+  'Chocolate',
+  'Oreo® Cookies n Cream',
+  'Chocolate Chip',
+  'Pralines', 'n Cream',
+  'Very Berry Strawberry',
+  'Chocolate Chip Cookie Dough',
+  'Old Fashioned Butter Pecan',
+  'Jamoca®',
+  'Jamoca® Almond Fudge',
+  'Reeses® Peanut Butter Cup',
+  'Rocky Road',
+  'Peanut Butter ’n Chocolate',
+  'Gold Medal Ribbon®',
+  'World Class® Chocolate',
+  'Cherries Jubilee',
+  'Chocolate Fudge',
+  'Daiquiri Ice',
+  'Rainbow Sherbet',
+  'Rainbow Swirl'
+]
+const seasonalFlavors = ['Americas Birthday Cake',
+  'Baseball Nut®',
+  'Blueberry Cheesecake',
+  'Bourbon Street Pecan Pie',
+  'Brownie Bar Mashup',
+  'Cherry Cordial with Kisses',
+  'Chocolate Mousse Royale',
+  'French Vanilla',
+  'Eggnog',
+  'German Chocolate Cake',
+  'Icing on the Cake',
+  'Love Potion #31',
+  'New York Cheesecake',
+  'Nutty Coconut',
+  'Peppermint',
+  'Strawberry Cheesecake',
+  'Rock ’n Pop Swirl',
+  'Reese’s Peanut Butter Cup',
+  'Trick Oreo Treat',
+  'Winter White Chocolate',
+  'made with Snickers®',
+  'made with M&Ms®',
+  'Heath®',
+  'Mango Tango'
+]
+
+const regionalFlavors = ['Pink Bubblegum',
+  'Caramel Macchiato',
+  'York Peppermint Pattie',
+  'Cotton Candy',
+  'Orange Sherbet',
+  'Grape Ice',
+  'Watermelon Ice',
+  'Miami Vice Sorbet',
+  'Splish Splash®',
+  'Wild n Reckless Sherbet',
+  'Lemon Custard',
+  'Oregon Blackberry',
+  'Bananas ‘n Strawberries',
+  'Mississippi Mud',
+  'Rum Raisin',
+  'Creole Cream Cheese',
+  'Chocolate Almond',
+  'Fudge Brownie',
+  'Banana Nut',
+  'Black Walnut',
+  'Cotton Candy Crackle',
+  'Quarterback Crunch',
+  'Chocolate Chocolate Chip Cheesecake',
+  'Caramel n Cookies'
+]
+
+const originalFlavors = ['Banana Nut Fudge',
   'Black Walnut',
   'Burgundy Cherry',
   'Butterscotch Ribbon',
@@ -39,15 +116,15 @@ var originalFlavors = ['Banana Nut Fudge',
 // to make sure it returns FALSE if length is not 31.
 // i.e. is31Flavors(originalFlavors) will return TRUE. */
 
-// function is31Flavors (arr) {
-//   if (arr.length === 31) {
-//     console.log(true)
-//   } else {
-//     console.log(false)
-//   }
-// }
+function is31Flavors (arr) {
+  if (arr.length === 31) {
+    return true
+  } else {
+    return false
+  }
+}
 
-// is31Flavors(originalFlavors)
+console.log(is31Flavors(originalFlavors))
 
 // // /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert!
 // // They think this will be a game changer. You need to modify the array to include this flavor.
@@ -61,11 +138,11 @@ var originalFlavors = ['Banana Nut Fudge',
 
 // // For example addFlavor('Rainbow Sherbert', originalFlavors) should return ['Rainbow Sherbert', 'Banana Nut Fudge',...'Vanilla Burnt Almond'] */
 
-// function addFlavor (flavor, arr) {
-//   arr.unshift(flavor)
-//   console.log(arr)
-// }
-// addFlavor('Rainbow Sherbert', originalFlavors)
+function addFlavor (flavor, arr) {
+  arr.unshift(flavor)
+  console.log(arr)
+}
+addFlavor('Rainbow Sherbert', originalFlavors)
 
 // // /* Task 3: Houston, we have a problem! There are now 32 flavors in the array!
 // // Your task is to remove an item from the end of the array.
@@ -74,11 +151,11 @@ var originalFlavors = ['Banana Nut Fudge',
 // // Your function should remove a flavor from the end of the array and console.log the resulting array.
 // // For example removeLastFlavor(originalFlavors) would return ['Rainbow Sherbert', 'Banana Nut Fudge',...'Vanilla'] */
 
-// function removeLastFlavor (arr) {
-//   arr.pop()
-//   console.log(arr)
-// }
-// removeLastFlavor(originalFlavors)
+function removeLastFlavor (arr) {
+  arr.pop()
+  console.log(arr)
+}
+removeLastFlavor(originalFlavors)
 
 // /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -89,11 +166,11 @@ var originalFlavors = ['Banana Nut Fudge',
 
 // For example, getFlavorByIndex(originalFlavors, 2) would return 'Black Walnut', assuming Rainbow Sherbert has been added successfully. */
 
-// function getFlavorByIndex (arr, index) {
-//   console.log(arr[index])
-// }
+function getFlavorByIndex (arr, index) {
+  return arr[index]
+}
 
-// getFlavorByIndex(originalFlavors, 2)
+console.log(getFlavorByIndex(originalFlavors, 2))
 
 // /* Task 5: As corporate wants to add more and more flavors to their lineup,
 // they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor.
@@ -110,17 +187,17 @@ var originalFlavors = ['Banana Nut Fudge',
 
 // */
 
-// function removeFlavorByName (arr, flav) {
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === flav) {
-//       // console.log(arr[i]) //text to make sure 'vanilla' is the one being removed
-//       arr.splice(i, 1)
-//     }
-//     console.log(arr)
-//   }
-// }
+function removeFlavorByName (arr, flav) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === flav) {
+      // console.log(arr[i]) //text to make sure 'vanilla' is the one being removed
+      arr.splice(i, 1)
+    }
+    return arr
+  }
+}
 
-// removeFlavorByName(originalFlavors, 'Vanilla')
+console.log(removeFlavorByName(originalFlavors, 'Vanilla'))
 
 // /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors.
 // Write a function called copy that makes a copy of the array.
@@ -130,14 +207,15 @@ var originalFlavors = ['Banana Nut Fudge',
 // 2 arguments 1 for your new array and one for your original array
 
 // and should return a new array that is identical to the old array. You can name the new array however you'd like. */
-// function copy (arr, arrCopy) {
-//   arrCopy = [...arr]
-//   return arrCopy
-// }
 
-// let originalFlavorsCopy = []
-// originalFlavorsCopy = copy(originalFlavors, originalFlavorsCopy)
-// console.log(originalFlavorsCopy)
+function copy (arr, arrCopy) {
+  arrCopy = [...arr]
+  return arrCopy
+}
+
+let originalFlavorsCopy = []
+originalFlavorsCopy = copy(originalFlavors, originalFlavorsCopy)
+console.log(originalFlavorsCopy)
 
 // /* Task 7: July 7th is 'World Chocolate Day' and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding 'chocolate' into your function, pass a string as a parameter, and invoke with the argument 'chocolate'. This way you could also filter for 'Vanilla', 'Sherbert', etc. when those holidays roll around.
 
@@ -154,19 +232,19 @@ var originalFlavors = ['Banana Nut Fudge',
 
 // hint - you can use the .includes method to help you solve this */
 
-// function filterByWord (allFlavors, flavor) {
-//   const filteredArray = []
+function filterByWord (allFlavors, flavor) {
+  const filteredArray = []
 
-//   for (let i = 0; i < allFlavors.length; i++) {
-//     if (allFlavors[i].includes(flavor)) {
-//       filteredArray.push(allFlavors[i])
-//       // console.log(allFlavors[i]) // debugging console.log
-//     }
-//   }
-//   console.log(filteredArray)
-// }
+  for (let i = 0; i < allFlavors.length; i++) {
+    if (allFlavors[i].includes(flavor)) {
+      filteredArray.push(allFlavors[i])
+      // console.log(allFlavors[i]) // debugging console.log
+    }
+  }
+  return filteredArray
+}
 
-// filterByWord(originalFlavors, 'Chocolate')
+filterByWord(originalFlavors, 'Chocolate')
 
 // /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
@@ -195,90 +273,15 @@ var originalFlavors = ['Banana Nut Fudge',
 
 // forExample, getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ['Strawberry Cheesecake', 'Eggnog,'...'Chocolate'].*/
 
-// Data ⬇️
-var newFlavors = ['Date night',
-  'U.S.S Butterscotch (Stranger Things special)',
-  'Honey Almond',
-  'Mint Chocolate Chip',
-  'Chocolate',
-  'Oreo® Cookies n Cream',
-  'Chocolate Chip',
-  'Pralines', 'n Cream',
-  'Very Berry Strawberry',
-  'Chocolate Chip Cookie Dough',
-  'Old Fashioned Butter Pecan',
-  'Jamoca®',
-  'Jamoca® Almond Fudge',
-  'Reeses® Peanut Butter Cup',
-  'Rocky Road',
-  'Peanut Butter ’n Chocolate',
-  'Gold Medal Ribbon®',
-  'World Class® Chocolate',
-  'Cherries Jubilee',
-  'Chocolate Fudge',
-  'Daiquiri Ice',
-  'Rainbow Sherbet',
-  'Rainbow Swirl'
-]
-var seasonalFlavors = ['Americas Birthday Cake',
-  'Baseball Nut®',
-  'Blueberry Cheesecake',
-  'Bourbon Street Pecan Pie',
-  'Brownie Bar Mashup',
-  'Cherry Cordial with Kisses',
-  'Chocolate Mousse Royale',
-  'French Vanilla',
-  'Eggnog',
-  'German Chocolate Cake',
-  'Icing on the Cake',
-  'Love Potion #31',
-  'New York Cheesecake',
-  'Nutty Coconut',
-  'Peppermint',
-  'Strawberry Cheesecake',
-  'Rock ’n Pop Swirl',
-  'Reese’s Peanut Butter Cup',
-  'Trick Oreo Treat',
-  'Winter White Chocolate',
-  'made with Snickers®',
-  'made with M&Ms®',
-  'Heath®',
-  'Mango Tango'
-]
-var regionalFlavors = ['Pink Bubblegum',
-  'Caramel Macchiato',
-  'York Peppermint Pattie',
-  'Cotton Candy',
-  'Orange Sherbet',
-  'Grape Ice',
-  'Watermelon Ice',
-  'Miami Vice Sorbet',
-  'Splish Splash®',
-  'Wild n Reckless Sherbet',
-  'Lemon Custard',
-  'Oregon Blackberry',
-  'Bananas ‘n Strawberries',
-  'Mississippi Mud',
-  'Rum Raisin',
-  'Creole Cream Cheese',
-  'Chocolate Almond',
-  'Fudge Brownie',
-  'Banana Nut',
-  'Black Walnut',
-  'Cotton Candy Crackle',
-  'Quarterback Crunch',
-  'Chocolate Chocolate Chip Cheesecake',
-  'Caramel n Cookies'
-]
-
 function getRandomFlavors (arr1, arr2, arr3, arr4) {
-  const randomFlavors = []
-  const allFlavors = arr1.concat(arr2, arr3, arr4)
-  // console.log(allFlavors)
+  const randomFlavors = [] // declare randomFlavors array to push flavors to
+  const allFlavors = arr1.concat(arr2, arr3, arr4) // declare concatonated arrays to choose flavors from
+  const randomIndex = (Math.floor(Math.random())) * allFlavors.length // declare random index variable
+  // console.log(allFlavors) // make sure concatonate worked properly
 
   for (let i = 0; i < 31; i++) {
-    const randomFlavorChoice = allFlavors[Math.floor(Math.random() * allFlavors.length)]
-    randomFlavors.push(randomFlavorChoice)
+    const randomFlavorChoice = allFlavors.splice(randomIndex, 1) // pull random flavor from allFlavors
+    randomFlavors.push(randomFlavorChoice) // push that flavor to the randomFlavors array
   }
   return randomFlavors
 }
